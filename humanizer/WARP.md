@@ -3,9 +3,9 @@
 This file provides guidance to WARP (warp.dev) when working with code in this repository.
 
 ## What this repo is
-This repository is a **Claude Code skill** implemented entirely as Markdown.
+This repository is an **opencode skill** implemented entirely as Markdown.
 
-The “runtime” artifact is `SKILL.md`: Claude Code reads the YAML frontmatter (metadata + allowed tools) and the prompt/instructions that follow.
+The “runtime” artifact is `SKILL.md`: opencode reads the YAML frontmatter (metadata + allowed tools) and the prompt/instructions that follow.
 
 `README.md` is for humans: installation, usage, and a compact overview of the patterns.
 
@@ -21,20 +21,20 @@ The “runtime” artifact is `SKILL.md`: Claude Code reads the YAML frontmatter
 When changing behavior/content, treat `SKILL.md` as the source of truth, and update `README.md` to stay consistent.
 
 ## Common commands
-### Install the skill into Claude Code
-Recommended (clone directly into Claude Code skills directory):
+### Install the skill into opencode
+Recommended (clone directly into opencode skills directory):
 ```bash
-mkdir -p ~/.claude/skills
-git clone https://github.com/blader/humanizer.git ~/.claude/skills/humanizer
+mkdir -p ~/.opencode/skills
+git clone https://github.com/firewox/awesome-claude-skills.git ~/.opencode/skills/humanizer
 ```
 
 Manual install/update (only the skill file):
 ```bash
-mkdir -p ~/.claude/skills/humanizer
-cp SKILL.md ~/.claude/skills/humanizer/
+mkdir -p ~/.opencode/skills/humanizer
+cp SKILL.md ~/.opencode/skills/humanizer/
 ```
 
-## How to “run” it (Claude Code)
+## How to “run” it (opencode)
 Invoke the skill:
 - `/humanizer` then paste text
 
